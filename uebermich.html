@@ -1,0 +1,114 @@
+<!doctype html>
+<html lang="de">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Über mich – Regina Engbrocks</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <!-- NAV -->
+  <header class="nav" role="banner">
+    <div class="container nav-inner">
+      <a class="brand" href="index.html">
+        <span>HERZbeTONt</span>
+      </a>
+
+      <nav class="menu" aria-label="Hauptnavigation">
+        <a href="produkte.html">Produkte</a>
+        <a href="uebermich.html">Über mich</a>
+        <a href="kontakt.html">Kontakt</a>
+      </nav>
+
+      <div class="actions">
+        <button class="icon-btn" type="button" aria-label="Suche öffnen" onclick="openSearch()">
+          <svg class="icon" viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <circle cx="11" cy="11" r="7"></circle>
+            <path d="M20 20l-3.2-3.2"></path>
+          </svg>
+        </button>
+
+        <button class="icon-btn badge" data-count="0" type="button" aria-label="Warenkorb öffnen" onclick="openCart()">
+          <svg class="icon" viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M6 7h15l-1.5 9h-12z"></path>
+            <path d="M6 7l-2-3H2"></path>
+            <circle cx="9" cy="20" r="1"></circle>
+            <circle cx="18" cy="20" r="1"></circle>
+          </svg>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- Intro -->
+    <div class="intro">
+      <h1>Über mich</h1>
+      <p>Handwerk, Ruhe und Liebe zum Detail</p>
+    </div>
+
+    <!-- About section -->
+    <section class="block" aria-label="Über mich">
+      <div class="container">
+        <div class="card about-card">
+
+          <div class="about-grid">
+            <div class="about-image">
+              <img src="images/regina.jpg" alt="Regina Engbrocks" />
+            </div>
+
+            <div class="about-text">
+              <p>
+                Mein Name ist Regina Engbrocks.  
+                In meiner Arbeit verbinde ich Handwerk mit einem ruhigen,
+                zeitlosen Design. Jedes Stück entsteht mit viel Sorgfalt
+                und Liebe zum Detail.
+              </p>
+
+              <p>
+                Ich arbeite überwiegend in kleinen Serien oder fertige
+                individuelle Einzelstücke an – immer mit hochwertigen
+                Materialien und einem Blick für das Wesentliche.
+              </p>
+
+              <p>
+                Meine Arbeiten sollen den Alltag verschönern und
+                langlebige Begleiter sein.
+              </p>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+        <!-- back to home -->
+    <div class="back-home">
+      <a class="btn" href="index.html" aria-label="Zurück zur Startseite">
+        ← Zur Startseite
+      </a>
+    </div>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="footer" role="contentinfo">
+    <div class="container footer-inner">
+      <nav class="footer-links">
+        <a href="docs/agb.pdf" target="_blank" rel="noopener noreferrer">AGB</a>
+        <a href="impressum.html">Impressum</a>
+        <a href="docs/widerrufsbelehrung.pdf" target="_blank" rel="noopener noreferrer">Widerrufsbelehrung</a>
+        <a href="lieferung.html">Lieferung und Retoure</a>
+        <a href="zahlung.html">Zahlung</a>
+      </nav>
+      <div class="footer-meta">
+        <span>© <span id="year"></span> Regina Engbrocks</span>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
+  <script src="cart.js"></script>
+</body>
+</html>

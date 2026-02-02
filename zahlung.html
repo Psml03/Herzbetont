@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="de">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Zahlung – HERZbeTONt</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="nav" role="banner">
+    <div class="container nav-inner">
+      <a class="brand" href="index.html"><span>HERZbeTONt</span></a>
+      <nav class="menu" aria-label="Hauptnavigation">
+        <a href="produkte.html">Produkte</a>
+        <a href="uebermich.html">Über mich</a>
+        <a href="kontakt.html">Kontakt</a>
+      </nav>
+      <div class="actions">
+        <button class="icon-btn" type="button" aria-label="Suche öffnen" onclick="openSearch()">
+          <svg class="icon" viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <circle cx="11" cy="11" r="7"></circle>
+            <path d="M20 20l-3.2-3.2"></path>
+          </svg>
+        </button>
+        <button class="icon-btn badge" data-count="0" type="button" aria-label="Warenkorb öffnen" onclick="openCart()">
+          <svg class="icon" viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M6 7h15l-1.5 9h-12z"></path>
+            <path d="M6 7l-2-3H2"></path>
+            <circle cx="9" cy="20" r="1"></circle>
+            <circle cx="18" cy="20" r="1"></circle>
+          </svg>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <div class="container">
+      <h1>Zahlung</h1>
+      <p>Informationen zu Zahlung, akzeptierten Methoden und Sicherheitshinweisen.</p>
+    </div>
+    <div class="back-home">
+      <a class="btn" href="index.html" aria-label="Zurück zur Startseite">
+        ← Zur Startseite
+      </a>
+    </div>
+  </main>
+
+  <footer class="footer" role="contentinfo">
+    <div class="container footer-inner">
+      <nav class="footer-links" aria-label="Rechtliches">
+        <a href="docs/agb.pdf" target="_blank" rel="noopener noreferrer">AGB</a>
+        <a href="impressum.html">Impressum</a>
+        <a href="docs/widerrufsbelehrung.pdf" target="_blank" rel="noopener noreferrer">Widerrufsbelehrung</a>
+        <a href="lieferung.html">Lieferung und Retoure</a>
+        <a href="zahlung.html">Zahlung</a>
+      </nav>
+      <div class="footer-meta">
+        <span>© <span id="year"></span> Regina Engbrocks</span>
+      </div>
+    </div>
+  </footer>
+
+  <script>document.getElementById("year").textContent = new Date().getFullYear();</script>
+  <script src="cart.js"></script>
+</body>
+</html>

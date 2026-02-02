@@ -1,0 +1,251 @@
+<!doctype html>
+<html lang="de">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Produkte – Regina Engbrocks</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <!-- NAV (same as homepage) -->
+  <header class="nav" role="banner">
+    <div class="container nav-inner">
+      <a class="brand" href="index.html">
+        <span>HERZbeTONt</span>
+      </a>
+
+      <nav class="menu" aria-label="Hauptnavigation">
+        <a href="produkte.html">Produkte</a>
+        <a href="uebermich.html">Über mich</a>
+        <a href="kontakt.html">Kontakt</a>
+      </nav>
+
+      <div class="actions">
+        <button class="icon-btn" type="button" aria-label="Suche öffnen" onclick="openSearch()">
+          <svg class="icon" viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <circle cx="11" cy="11" r="7"></circle>
+            <path d="M20 20l-3.2-3.2"></path>
+          </svg>
+        </button>
+
+        <button class="icon-btn badge" data-count="0" type="button" aria-label="Warenkorb öffnen" onclick="openCart()">
+          <svg class="icon" viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M6 7h15l-1.5 9h-12z"></path>
+            <path d="M6 7l-2-3H2"></path>
+            <circle cx="9" cy="20" r="1"></circle>
+            <circle cx="18" cy="20" r="1"></circle>
+          </svg>
+        </button>
+      </div>
+    </div>
+  </header>
+  
+  <main>
+    <!-- page intro (same style family as homepage intro) -->
+    <div class="intro">
+      <h1>Produkte</h1>
+      <p>Handgemacht · Kleine Serien · Faire Preise</p>
+    </div>
+
+    <!-- products -->
+    <section class="block" aria-label="Produkte">
+      <div class="container">
+
+        <!-- Category navigation for products -->
+        <nav class="category-nav" aria-label="Produktkategorien">
+          <button class="category-btn active" data-cat="all">Alle</button>
+          <button class="category-btn" data-cat="frosche">Frösche</button>
+          <button class="category-btn" data-cat="huehner">Hühner</button>
+          <button class="category-btn" data-cat="fische">Fische</button>
+          <button class="category-btn" data-cat="frauen">Frauen</button>
+          <button class="category-btn" data-cat="kugeln-schalen">Kugeln und Schalen</button>
+          <button class="category-btn" data-cat="haeuser">Häuser</button>
+          <button class="category-btn" data-cat="kleines-feines">Kleines und Feines</button>
+        </nav>
+
+        <div class="product-grid">
+
+          <article class="product-card" data-id="p1" data-cat="frosche">
+            <img src="images/produkt1.jpg" alt="Produkt 1" />
+            <h2>Produkt 1</h2>
+            <p class="product-desc">Kurze Beschreibung. Material, Stil oder Nutzung.</p>
+            <div class="product-card-footer">
+              <span class="product-price">29 €</span>
+              <button class="btn primary add-to-cart" type="button" data-id="p1" data-name="Produkt 1" data-price="29">In den Warenkorb</button>
+            </div>
+          </article>
+
+          <article class="product-card" data-id="p2" data-cat="huehner">
+            <img src="images/produkt2.jpg" alt="Produkt 2" />
+            <h2>Produkt 2</h2>
+            <p class="product-desc">Minimalistisch, langlebig, zeitlos.</p>
+            <div class="product-card-footer">
+              <span class="product-price">35 €</span>
+              <button class="btn primary add-to-cart" type="button" data-id="p2" data-name="Produkt 2" data-price="35">In den Warenkorb</button>
+            </div>
+          </article>
+
+          <article class="product-card" data-id="p3" data-cat="fische">
+            <img src="images/produkt3.jpg" alt="Produkt 3" />
+            <h2>Produkt 3</h2>
+            <p class="product-desc">Optional personalisierbar.</p>
+            <div class="product-card-footer">
+              <span class="product-price">42 €</span>
+              <button class="btn primary add-to-cart" type="button" data-id="p3" data-name="Produkt 3" data-price="42">In den Warenkorb</button>
+            </div>
+          </article>
+
+          <article class="product-card" data-id="p4" data-cat="frauen">
+            <img src="images/produkt4.jpg" alt="Produkt 4" />
+            <h2>Produkt 4</h2>
+            <p class="product-desc">Perfekt als Geschenk oder für den Alltag.</p>
+            <div class="product-card-footer">
+              <span class="product-price">25 €</span>
+              <button class="btn primary add-to-cart" type="button" data-id="p4" data-name="Produkt 4" data-price="25">In den Warenkorb</button>
+            </div>
+          </article>
+
+          <article class="product-card" data-id="p5" data-cat="kugeln-schalen">
+            <img src="images/produkt5.jpg" alt="Produkt 5" />
+            <h2>Produkt 5</h2>
+            <p class="product-desc">Hochwertige Materialien, ruhiges Design.</p>
+            <div class="product-card-footer">
+              <span class="product-price">39 €</span>
+              <button class="btn primary add-to-cart" type="button" data-id="p5" data-name="Produkt 5" data-price="39">In den Warenkorb</button>
+            </div>
+          </article>
+
+          <article class="product-card" data-id="p6" data-cat="kleines-feines">
+            <img src="images/produkt6.jpg" alt="Produkt 6" />
+            <h2>Produkt 6</h2>
+            <p class="product-desc">In kleinen Stückzahlen gefertigt.</p>
+            <div class="product-card-footer">
+              <span class="product-price">48 €</span>
+              <button class="btn primary add-to-cart" type="button" data-id="p6" data-name="Produkt 6" data-price="48">In den Warenkorb</button>
+            </div>
+          </article>
+
+        </div>
+      </div>
+    </section>
+        <!-- back to home -->
+    <div class="back-home">
+      <a class="btn" href="index.html" aria-label="Zurück zur Startseite">
+        ← Zur Startseite
+      </a>
+    </div>
+  </main>
+
+  <!-- FOOTER (same as homepage) -->
+  <footer class="footer" role="contentinfo">
+    <div class="container footer-inner">
+      <nav class="footer-links" aria-label="Rechtliches">
+        <a href="docs/agb.pdf" target="_blank" rel="noopener noreferrer">AGB</a>
+        <a href="impressum.html">Impressum</a>
+        <a href="docs/widerrufsbelehrung.pdf" target="_blank" rel="noopener noreferrer">Widerrufsbelehrung</a>
+        <a href="lieferung.html">Lieferung und Retoure</a>
+        <a href="zahlung.html">Zahlung</a>
+      </nav>
+      <div class="footer-meta">
+        <span>© <span id="year"></span> Regina Engbrocks</span>
+      </div>
+    </div>
+  </footer>
+
+  <!-- SEARCH OVERLAY -->
+  <div id="searchOverlay" class="overlay" role="dialog" aria-modal="true" aria-label="Suche">
+    <div class="modal" onclick="event.stopPropagation()">
+      <div class="modal-head">
+        <div class="modal-title">Suche</div>
+        <button class="x" type="button" aria-label="Schließen" onclick="closeSearch()">
+          <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" aria-hidden="true">
+            <path d="M6 6l12 12M18 6L6 18"></path>
+          </svg>
+        </button>
+      </div>
+      <div class="modal-body">
+        <div class="search-row">
+          <input id="searchInput" type="search" placeholder="Suchen…" />
+          <button class="btn primary" type="button" onclick="fakeSearch()">Suchen</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- CART DRAWER -->
+  <aside id="cartDrawer" class="drawer" aria-label="Warenkorb" aria-hidden="true">
+    <div class="drawer-head">
+      <div class="drawer-title">Warenkorb</div>
+      <button class="x" type="button" aria-label="Schließen" onclick="closeCart()">
+        <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" aria-hidden="true">
+          <path d="M6 6l12 12M18 6L6 18"></path>
+        </svg>
+      </button>
+    </div>
+    <div class="drawer-body">
+      Noch leer.
+    </div>
+  </aside>
+
+  <script>
+    // Footer year
+    document.getElementById("year").textContent = new Date().getFullYear();
+
+    // Search overlay
+    function openSearch(){
+      const o = document.getElementById("searchOverlay");
+      o.classList.add("open");
+      setTimeout(() => document.getElementById("searchInput")?.focus(), 0);
+    }
+    function closeSearch(){
+      document.getElementById("searchOverlay").classList.remove("open");
+    }
+    document.getElementById("searchOverlay").addEventListener("click", closeSearch);
+
+    // Cart drawer
+    function openCart(){
+      const d = document.getElementById("cartDrawer");
+      d.classList.add("open");
+      d.setAttribute("aria-hidden", "false");
+    }
+    function closeCart(){
+      const d = document.getElementById("cartDrawer");
+      d.classList.remove("open");
+      d.setAttribute("aria-hidden", "true");
+    }
+
+    // Esc closes overlays
+    document.addEventListener("keydown", (e) => {
+      if(e.key === "Escape"){
+        closeSearch();
+        closeCart();
+      }
+    });
+
+    function fakeSearch(){
+      const q = document.getElementById("searchInput").value.trim();
+      if(!q) return;
+      if(window.performSearch){ window.performSearch(q); }
+      else { closeSearch(); }
+    }
+    
+    // Category filtering
+    document.addEventListener('click', (e) => {
+      const cb = e.target.closest && e.target.closest('.category-btn');
+      if(!cb) return;
+      document.querySelectorAll('.category-btn').forEach(x=> x.classList.remove('active'));
+      cb.classList.add('active');
+      const cat = cb.getAttribute('data-cat');
+      document.querySelectorAll('.product-card').forEach(card => {
+        if(cat === 'all') card.style.display = '';
+        else card.style.display = (card.getAttribute('data-cat') === cat) ? '' : 'none';
+      });
+    });
+
+    // init
+    
+  </script>
+  <script src="cart.js"></script>
+</body>
+</html>
